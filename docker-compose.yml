@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: dba1
+      POSTGRES_PASSWORD: pwdba1
+      POSTGRES_DB: db_empresa
+      DATABASE_HOST: 127.0.0.1
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - pg_data:/var/lib/postgresql/data/pgdata
+    ports:
+     - "5432:5432"
+    networks:
+      my_network:
+        ipv4_address: 172.16.200.2
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+    networks:
+      my_network:
+        ipv4_address: 172.16.200.3
+
+volumes:
+  pg_data:
+    
+networks:
+  my_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.200.0/24
