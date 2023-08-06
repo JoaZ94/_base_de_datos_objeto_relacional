@@ -97,7 +97,11 @@ Y guardamos los datos.
 
 ![Panel de pgAdmin](images/panel_pgadmin.png)
 
+
+
 ![COnfiguración pestaña General](images/agregar_servidor_p1.png)
+
+
 
 ![COnfiguración pestaña Conexión](images/agregar_servidor_p2.png)
 

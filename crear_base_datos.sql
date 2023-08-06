@@ -64,16 +64,16 @@ VALUES
 /* Se insertan los registros de la tabla empleados_proyecto, con la cual se relacionan
  los empleados que participan en los proyectos */
 
- INSERT INTO empleados_proyecto (id_empelado, id_proyecto)
+ INSERT INTO empleados_proyecto (id_empleado, id_proyecto)
  VALUES
-    (1001, 9001),
-    (1001, 9003),
-    (1002, 9001),
-    (1003, 9002),
-    (1003, 9001),
-    (1004, 9003),
-    (1005, 9003),
-    (1006, 9001),
-    (1007, 9001),
-    (1007, 9002),
-    (1007, 9003);
+    (10001, 9001),
+    (10001, 9003),
+    (10002, 9001),
+    (10003, 9002),
+    (10003, 9001),
+    (10004, 9003),
+    (10005, 9003),
+    (10006, 9001),
+    (10007, 9001),
+    (10007, 9002),
+    (10007, 9003);
